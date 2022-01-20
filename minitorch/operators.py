@@ -70,8 +70,7 @@ def sigmoid(x):
         float : sigmoid value
     """
     # TODO: Implement for Task 0.1.
-    raise NotImplementedError('Need to implement for Task 0.1')
-
+    return 1.0/(1.0+math.exp(-x)) if(x>=0) else math.exp(x)/(1.0+math.exp(x))
 
 def relu(x):
     """
