@@ -70,7 +70,7 @@ def sigmoid(x):
         float : sigmoid value
     """
     # TODO: Implement for Task 0.1.
-    return 1.0/(1.0+math.exp(-x)) if(x>=0) else math.exp(x)/(1.0+math.exp(x))
+    return 1.0/(1.0+math.exp(-x)) if(x>=0) else 1-1.0/(1.0+math.exp(x))
 
 def relu(x):
     """
@@ -118,7 +118,7 @@ def inv_back(x, d):
 def relu_back(x, d):
     r"If :math:`f = relu` compute :math:`d \times f'(x)`"
     # TODO: Implement for Task 0.1.
-    return -1*d if(x>0) else 0
+    return d if(x>0) else 0
 
 # ## Task 0.3
 
