@@ -105,9 +105,10 @@ def test_sigmoid(a):
     * it is  strictly increasing.
     """
     # TODO: Implement for Task 0.2.
-    assert sigmoid(0)==0.5
-    assert sigmoid(a)>=0.0 and sigmoid(a)<=1.0
-    assert sigmoid(a)+sigmoid(-a)==1
+    assert sigmoid(0) == 0.5
+    assert sigmoid(a) >= 0.0 and sigmoid(a) <= 1.0
+    assert sigmoid(a) + sigmoid(-a) == 1
+
 
 @pytest.mark.task0_2
 @given(small_floats, small_floats, small_floats)
@@ -117,6 +118,7 @@ def test_transitive(a, b, c):
     assert True
     "Gives error at 0.0 0.0 and 0.0"
 
+
 @pytest.mark.task0_2
 def test_symmetric():
     """
@@ -124,9 +126,10 @@ def test_symmetric():
     gives the same value regardless of the order of its input.
     """
     # TODO: Implement for Task 0.2.
-    for a in range(-100,10):
-        for b in range (-10,10):
-            assert mul(a,b)==mul(b,a)
+    for a in range(-100, 10):
+        for b in range(-10, 10):
+            assert mul(a, b) == mul(b, a)
+
 
 @pytest.mark.task0_2
 def test_distribute():
@@ -134,9 +137,9 @@ def test_distribute():
     Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
     """
-    for i in range (-10,10):
-        for j in range (-10,10):
-            assert j*add(j,i)==j*i+j*j
+    for i in range(-10, 10):
+        for j in range(-10, 10):
+            assert j * add(j, i) == j * i + j * j
     # TODO: Implement for Task 0.2.
 
 
@@ -145,12 +148,9 @@ def test_other():
     """
     Write a test that ensures some other property holds for your functions.
     """
-    for i in range(-10,10):
-        for j in range (-10,10):
-            assert mul(i,j)==mul(j,i)
-
-
-    # TODO: Implement for Task 0.2.
+    for i in range(-10, 10):
+        for j in range(-10, 10):
+            assert mul(i, j) == mul(j, i)
 
 
 # ## Task 0.3  - Higher-order functions
