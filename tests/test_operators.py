@@ -179,7 +179,9 @@ def test_sum_distribute(ls1, ls2):
     is the same as the sum of each element of `ls1` plus each element of `ls2`.
     """
     # TODO: Implement for Task 0.3.
-    raise NotImplementedError('Need to implement for Task 0.3')
+    check = addLists(ls1, ls2)
+    for i in range(len(ls1)):
+        assert_close(check[i], ls1[i] + ls2[i])
 
 
 @pytest.mark.task0_3
