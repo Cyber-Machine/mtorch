@@ -63,7 +63,7 @@ class Module:
         "Enumerate over all the parameters of this module and its descendents."
         # TODO: Implement for Task 0.4.
         return self.named_parameters().values()
-   
+
     def add_parameter(self, k, v):
         """
         Manually add a parameter. Useful helper for scalar parameters.
